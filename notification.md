@@ -25,3 +25,6 @@ A lightweight, scalable backend system built with Node.js and Express to manage 
 ### Stage 3: Engine Optimization & Index Tuning
 * Analyzed a bottleneck relational statement and designed a compound multi-key index `(studentId, isRead, createdAt)` reducing complexity to $O(\log N)$.
 * Documented why blindly indexing every column degrades system write performance.
+### Stage 4: Cache Caching Layers
+* Handled the system breakdown issue caused by continuous page refreshes using a hybrid caching approach.
+* Mapped application state using React Query on client side and **Redis in-memory caching** patterns on the server layer.
