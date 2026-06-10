@@ -28,3 +28,6 @@ A lightweight, scalable backend system built with Node.js and Express to manage 
 ### Stage 4: Cache Caching Layers
 * Handled the system breakdown issue caused by continuous page refreshes using a hybrid caching approach.
 * Mapped application state using React Query on client side and **Redis in-memory caching** patterns on the server layer.
+### Stage 5: Asynchronous Microservice Routing
+* Resolved tight-coupling blocking loop issues during bulk triggers (e.g., sending 50,000 student payloads).
+* Redesigned workflow using decoupled message queues (**BullMQ/RabbitMQ** workers) backed by exponential retry strategies.
