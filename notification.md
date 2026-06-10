@@ -1,0 +1,27 @@
+# Student Notification System (Backend Core)
+
+A lightweight, scalable backend system built with Node.js and Express to manage and prioritize notifications for students. Designed keeping real-time pushes, query optimization, and memory efficiency in mind.
+
+---
+
+## Technical Stack
+* **Runtime Environment:** Node.js
+* **Backend Framework:** Express.js
+* **Database Driver:** Mongoose (MongoDB Engine)
+* **Testing Tool:** Postman / Native Fetch Pipeline
+
+---
+
+## Assignment Framework & Structural Solutions
+
+### Stage 1: API Architecture & Communication
+* Built functional REST endpoints with strong validation checking for unique student identities (`X-User-Id` static header token routing).
+* Designed real-time delivery mechanism using **Socket.io/WebSockets** room-isolation to eliminate database fetch overhead.
+
+### Stage 2: Database Layer Strategy
+* Selected **MongoDB** over typical relational databases due to high write-throughput scalability and flexible schema attributes.
+* Formulated scalable schemas to support variable structures (Placement, Result, Event) without operational downtime.
+
+### Stage 3: Engine Optimization & Index Tuning
+* Analyzed a bottleneck relational statement and designed a compound multi-key index `(studentId, isRead, createdAt)` reducing complexity to $O(\log N)$.
+* Documented why blindly indexing every column degrades system write performance.
